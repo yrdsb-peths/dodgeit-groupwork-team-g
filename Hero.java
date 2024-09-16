@@ -1,5 +1,6 @@
 import greenfoot.*; 
 
+//group part 2 testing
 public class Hero extends Actor
 {
     boolean atTop = true;
