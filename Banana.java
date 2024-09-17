@@ -19,16 +19,21 @@ public class Banana extends Actor
         if(getX() <= 0)
         {
             
-            int number = Greenfoot.getRandomNumber(2);
+            int number = Greenfoot.getRandomNumber(3);
             
             
-            if(number == 0)
+            if(number == 1)
             {
                 setLocation(600,100);
             }
             else
             {
-                setLocation(600, 300);
+                if(number == 2){
+                    setLocation(600, 300);
+                }
+                else{
+                    setLocation(600, 200);
+                }
             }
         }
         
