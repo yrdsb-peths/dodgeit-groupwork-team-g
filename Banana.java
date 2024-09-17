@@ -28,5 +28,11 @@ public class Banana extends Actor
                 setLocation(600, 300);
             }
         }
+        if(isTouching(Hero.class))
+        {
+            Face face = new Face();
+            getWorld().addObject(face, 300, 200);
+            getWorld().removeObject(this);
+        }
     }
 }
