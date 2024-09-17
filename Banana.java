@@ -12,15 +12,14 @@ public class Banana extends Actor
      * Act - do whatever the Banana wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private boolean addedBanana = false;
     public void act()
     {
         //comment ++
-        move(-15);
+        move(-3);
         if(getX() <= 0)
         {
-            
             int number = Greenfoot.getRandomNumber(2);
-            
             
             if(number == 0)
             {
@@ -31,13 +30,13 @@ public class Banana extends Actor
                 setLocation(600, 300);
             }
         }
-
         
         if(isTouching(Hero.class))
-            {
+        {
                 SadFace sadFace = new SadFace();
                 getWorld().addObject(sadFace, 300, 200);
-                getWorld().removeObject(this);
-            }
+                ((MyWorld) getWorld()).removeAllBananas();
+        }
+       
     }
 }
