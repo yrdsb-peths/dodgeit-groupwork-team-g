@@ -15,7 +15,7 @@ public class Banana extends Actor
     public void act()
     {
         //comment ++
-        move(-5);
+        move(-15);
         if(getX() <= 0)
         {
             
