@@ -2,22 +2,29 @@ import greenfoot.*;
 
 public class Hero extends Actor
 {
-    boolean atTop = true;
-    
+    int where = 0;
     public void act()
     {
         if(Greenfoot.mouseClicked(null))
         {
-            atTop = !atTop;
+            where += 1;
+            if(where == 3){
+                where = 0;
+            }
         }
         
-        if(atTop)
+        if(where == 0)
         {
             setLocation(100, 100);
         }
         else
         {
-            setLocation(100, 300);
+            if(where == 1){
+                setLocation(100,200);
+            }
+            else{
+                setLocation(100, 300);
+            }
         }
     }
 }
