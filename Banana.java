@@ -15,10 +15,13 @@ public class Banana extends Actor
     public void act()
     {
         //comment ++
-        move(-5);
+        move(-15);
         if(getX() <= 0)
         {
+            
             int number = Greenfoot.getRandomNumber(2);
+            
+            
             if(number == 0)
             {
                 setLocation(600,100);
@@ -28,11 +31,13 @@ public class Banana extends Actor
                 setLocation(600, 300);
             }
         }
+
+        
         if(isTouching(Hero.class))
-        {
-            Face face = new Face();
-            getWorld().addObject(face, 300, 200);
-            getWorld().removeObject(this);
-        }
+            {
+                SadFace sadFace = new SadFace();
+                getWorld().addObject(sadFace, 300, 200);
+                getWorld().removeObject(this);
+            }
     }
 }
