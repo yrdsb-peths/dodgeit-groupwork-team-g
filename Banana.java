@@ -18,7 +18,10 @@ public class Banana extends Actor
         move(-5);
         if(getX() <= 0)
         {
+            
             int number = Greenfoot.getRandomNumber(2);
+            
+            
             if(number == 0)
             {
                 setLocation(600,100);
@@ -28,5 +31,10 @@ public class Banana extends Actor
                 setLocation(600, 300);
             }
         }
+        
+        if(isTouching(Hero.class))
+            {
+                getWorld().removeObject(this);
+            }
     }
 }
