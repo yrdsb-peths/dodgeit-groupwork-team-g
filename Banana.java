@@ -31,6 +31,7 @@ public class Banana extends Actor
                 setLocation(600, 300);
             }
         }
+
         
         if(isTouching(Hero.class))
             {
